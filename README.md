@@ -18,6 +18,17 @@ AlphaGo is a much more powerful Golang library than official's.
 ```go
 go get github.com/wgliang/alphago
 ```
+## ToDo List
+
+- type convert
+- ip operation
+- sort(map,array,slice)
+- version tag
+- timewheel
+- encrypt and decode
+- cache algorithm
+- math
+- block
 
 ## Contributing
 
