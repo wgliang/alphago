@@ -7,10 +7,10 @@ import (
 var su = "hello,world!"
 var bu = []byte(su)
 
-func Test_str2bytes(t *testing.T) {
-	_ = str2bytes(su)
+func Test_Str2bytes(t *testing.T) {
+	_ = Str2Bytes(su)
 }
 
-func Test_bytes2str(t *testing.T) {
-	_ = bytes2str(bu)
+func Test_Bytes2str(t *testing.T) {
+	_ = Bytes2Str(bu)
 }

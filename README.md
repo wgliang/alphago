@@ -20,8 +20,6 @@ go get github.com/wgliang/alphago
 ```
 ## ToDo List
 
-- type convert
-- ip operation
 - sort(map,array,slice)
 - version tag
 - timewheel

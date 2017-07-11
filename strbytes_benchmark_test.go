@@ -5,41 +5,25 @@ import (
 	"testing"
 )
 
-var s = strings.Repeat("hello", 1000)
-var b = []byte(s)
-
-func official_bytes() {
-	_ = []byte(s)
-}
-
-func official_string() {
-	_ = string(b)
-}
-
-func alphago_str2bytes() {
-	_ = str2bytes(s)
-}
-
-func alphago_bytes2str() {
-	_ = bytes2str(b)
-}
+var stringBench = strings.Repeat("hello", 1000)
+var bytesBench = []byte(stringBench)
 
 //  +-------------------------------------------------------------------------+
 //  |  Operation  |    Cycles    | Time(ns)/op | Memory(B)/op |  Allocate/op  |
 //  +=========================================================================+
 //  |   []byte    |  2000000     |     885     |     5376     |      1        |
 //  +-------------------------------------------------------------------------+
-//  |  str2bytes  | 1000000000   |     2.61    |      0       |      0        |
+//  |  Str2Bytes  | 1000000000   |     2.61    |      0       |      0        |
 //  +-------------------------------------------------------------------------+
 func Benchmark_official_bytes_Test(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		official_bytes()
+		_ = []byte(stringBench)
 	}
 }
 
-func Benchmark_alphago_str2bytes_Test(b *testing.B) {
+func Benchmark_alphago_Str2Bytes_Test(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		alphago_str2bytes()
+		_ = Str2Bytes(stringBench)
 	}
 }
 
@@ -48,16 +32,16 @@ func Benchmark_alphago_str2bytes_Test(b *testing.B) {
 //  +=========================================================================+
 //  |   []byte    |  1000000     |     1041    |     5376     |      1        |
 //  +-------------------------------------------------------------------------+
-//  |  str2bytes  | 2000000000   |     1.02    |      0       |      0        |
+//  |  Bytes2Str  | 2000000000   |     1.02    |      0       |      0        |
 //  +-------------------------------------------------------------------------+
 func Benchmark_official_string_Test(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		official_string()
+		_ = string(bytesBench)
 	}
 }
 
-func Benchmark_alphago_bytes2str_Test(b *testing.B) {
+func Benchmark_alphago_Bytes2Str_Test(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		alphago_bytes2str()
+		_ = Bytes2Str(bytesBench)
 	}
 }
