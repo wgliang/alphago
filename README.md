@@ -30,7 +30,7 @@ go get github.com/wgliang/alphago
 
 ## Contributing
 
-If you have a good idea, welcome to [PR](https://github.com/wgliang/alphago/pulls) and [Issue](https://github.com/wgliang/alphago/issues).
+If you have a good idea, a better, faster or more secure function implementation, welcome to [PR](https://github.com/wgliang/alphago/pulls) and [Issue](https://github.com/wgliang/alphago/issues).
 
 ## Credits
 

@@ -1,6 +1,7 @@
 package alphago
 
 import (
+	"fmt"
 	"reflect"
 	"testing"
 )
@@ -16,7 +17,6 @@ func Test_Str2bytes(t *testing.T) {
 }
 
 func Test_Bytes2str(t *testing.T) {
-	_ = Bytes2Str(bu)
 	if !reflect.DeepEqual(Bytes2Str(bu), "hello,world!") {
 		t.Error(`Bytes2Str([]uint8{104, 101, 108, 108, 111, 44, 119, 111, 114, 108, 100, 33}) != hello,world!`)
 	}
