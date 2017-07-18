@@ -1,7 +1,6 @@
 package alphago
 
 import (
-	"fmt"
 	"reflect"
 	"testing"
 )
